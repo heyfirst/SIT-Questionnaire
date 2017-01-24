@@ -11,6 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'QuestionnaireController@index');
+Route::get('/{qid}', 'QuestionnaireController@each');
+Route::post('/create', 'QuestionnaireController@create');
+
+Route::get('/{qid}/{question_id}', 'QuestionController@question');
+
+Route::get('/{qid}/response', 'ResponseController@resp');
