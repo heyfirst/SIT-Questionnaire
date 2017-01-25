@@ -20,13 +20,27 @@ const app = new Vue({
 });
 
 (function ($) {
-    $('.delete-btn').click(() => {
-        $('.ui.basic.modal')
-            .modal('show');
-    });
 
-    flatpickr(".flatpickr",
-    {
-	    minDate: new Date(),
-    });
+  $('.delete-btn').click(() => {
+    $('.ui.modal.delete-question')
+      .modal('show');
+  });
+
+  $('.create-type-btn').click(() => {
+    $('.ui.modal.create-type')
+      .modal('show');
+  });
+
+  $('.create-question-btn').click(() => {
+    $('.ui.modal.create-question')
+      .modal('show');
+  });
+
+  flatpickr(".flatpickr",
+  {
+    minDate: new Date(),
+  });
+
+  $('select.dropdown').dropdown();
+
 }(jQuery));

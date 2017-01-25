@@ -10,12 +10,18 @@
   
   <section id="creation" class="ui text container">
     <h3 class="ui header">Manage Questions</h3>
-    <a href="#" class="ui animated fade button basic grey" tabindex="0">
+    <button class="ui animated fade button basic green create-question-btn" tabindex="0">
       <div class="hidden content">
         <i class="icon plus"></i>
       </div>
       <div class="visible content">Create Question !</div>
-    </a>
+    </button>
+    <button class="ui animated fade button basic blue create-type-btn" tabindex="0">
+      <div class="hidden content">
+        <i class="icon plus"></i>
+      </div>
+      <div class="visible content">Create Types !</div>
+    </button>
   </section>
 
   <div class="ui section divider container"></div>
@@ -39,6 +45,8 @@
     @endfor
   </section>
 
-  @include('helper.modal')
+  @include('helper.deleteq')
+  @include('helper.create.type')
+  @include('helper.create.question')
 
 @endsection

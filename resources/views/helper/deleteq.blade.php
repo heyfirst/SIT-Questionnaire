@@ -1,4 +1,4 @@
-<div class="ui basic modal">
+<div class="ui basic modal delete-question">
   <div class="ui icon header">
     <i class="archive icon"></i>
     Do you wanna to delete it ?
